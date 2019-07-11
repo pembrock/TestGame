@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var actionButton: UIButton!
     @IBOutlet weak var shapeX: NSLayoutConstraint!
     @IBOutlet weak var shapeY: NSLayoutConstraint!
+    @IBOutlet weak var gameObject: UIImageView!
     
     private var isGameActive = false
     private var gameTimeLeft: TimeInterval = 0
@@ -82,8 +83,8 @@ class ViewController: UIViewController {
     }
     
     @objc private func moveImage() {
-        let maxX = 100;
-        let maxY = 100;
+        let maxX = gameFieldView.bounds.maxX - gameObject.frame.width;
+        let maxY = gameFieldView.bounds.maxY - gameObject.frame.height;
         
         shapeX.constant = CGFloat(arc4random_uniform(UInt32(maxX)))
         shapeY.constant = CGFloat(arc4random_uniform(UInt32(maxY)))

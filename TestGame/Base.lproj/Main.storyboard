@@ -82,6 +82,7 @@
                     <connections>
                         <outlet property="actionButton" destination="m2i-cH-W6F" id="jQd-6L-icy"/>
                         <outlet property="gameFieldView" destination="1vm-Vv-GLu" id="gbd-n8-ufh"/>
+                        <outlet property="gameObject" destination="iTp-WX-JNB" id="N5F-vN-1zs"/>
                         <outlet property="shapeX" destination="6AI-ry-Uk7" id="SS6-Fn-Fev"/>
                         <outlet property="shapeY" destination="naW-iB-XuH" id="yAd-iT-OYN"/>
                         <outlet property="stepper" destination="e5s-X8-3Up" id="kzF-fW-vcj"/>
