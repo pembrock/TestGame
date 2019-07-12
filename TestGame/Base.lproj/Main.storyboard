@@ -21,12 +21,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1vm-Vv-GLu">
                                 <rect key="frame" x="20" y="120" width="374" height="612"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Red_Triangle" translatesAutoresizingMaskIntoConstraints="NO" id="iTp-WX-JNB">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Red_Triangle" translatesAutoresizingMaskIntoConstraints="NO" id="iTp-WX-JNB">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="6ze-5L-Xpo"/>
                                             <constraint firstAttribute="width" constant="50" id="lBB-nY-ym3"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="yjX-J5-cZ0" appends="YES" id="kBR-YS-e0w"/>
+                                        </connections>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -83,6 +87,7 @@
                         <outlet property="actionButton" destination="m2i-cH-W6F" id="jQd-6L-icy"/>
                         <outlet property="gameFieldView" destination="1vm-Vv-GLu" id="gbd-n8-ufh"/>
                         <outlet property="gameObject" destination="iTp-WX-JNB" id="N5F-vN-1zs"/>
+                        <outlet property="scoreLabel" destination="Mzs-c2-Age" id="dpe-vm-Qwh"/>
                         <outlet property="shapeX" destination="6AI-ry-Uk7" id="SS6-Fn-Fev"/>
                         <outlet property="shapeY" destination="naW-iB-XuH" id="yAd-iT-OYN"/>
                         <outlet property="stepper" destination="e5s-X8-3Up" id="kzF-fW-vcj"/>
@@ -90,6 +95,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="yjX-J5-cZ0">
+                    <connections>
+                        <action selector="objectTapped:" destination="BYZ-38-t0r" id="fY0-Qc-QvE"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.23188405797103" y="133.25892857142856"/>
         </scene>
