@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,26 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1vm-Vv-GLu">
-                                <rect key="frame" x="20" y="120" width="374" height="612"/>
-                                <subviews>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Red_Triangle" translatesAutoresizingMaskIntoConstraints="NO" id="iTp-WX-JNB">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="6ze-5L-Xpo"/>
-                                            <constraint firstAttribute="width" constant="50" id="lBB-nY-ym3"/>
-                                        </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="yjX-J5-cZ0" appends="YES" id="kBR-YS-e0w"/>
-                                        </connections>
-                                    </imageView>
-                                </subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1vm-Vv-GLu" customClass="GameFieldView" customModule="TestGame" customModuleProvider="target">
+                                <rect key="frame" x="20" y="112" width="374" height="620"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="iTp-WX-JNB" firstAttribute="leading" secondItem="1vm-Vv-GLu" secondAttribute="leading" id="6AI-ry-Uk7"/>
-                                    <constraint firstItem="iTp-WX-JNB" firstAttribute="top" secondItem="1vm-Vv-GLu" secondAttribute="top" id="naW-iB-XuH"/>
-                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shapeSize">
+                                        <size key="value" width="80" height="80"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Последний счет: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mzs-c2-Age">
                                 <rect key="frame" x="132.5" y="800" width="149" height="21"/>
@@ -45,53 +33,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2i-cH-W6F">
-                                <rect key="frame" x="181.5" y="82" width="51" height="30"/>
-                                <state key="normal" title="Начать"/>
-                                <connections>
-                                    <action selector="actionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rNa-TF-L8j"/>
-                                </connections>
-                            </button>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" maximumValue="100" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="e5s-X8-3Up">
-                                <rect key="frame" x="300" y="52" width="94" height="29"/>
-                                <connections>
-                                    <action selector="stepperChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="aEV-L9-Wcu"/>
-                                </connections>
-                            </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время: 30 сек" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BR-8Y-hgx">
-                                <rect key="frame" x="20" y="56" width="113.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GCz-Hq-YYQ" customClass="GameControllerViewClass" customModule="TestGame" customModuleProvider="target">
+                                <rect key="frame" x="20" y="44" width="374" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="m2i-cH-W6F" firstAttribute="top" secondItem="e5s-X8-3Up" secondAttribute="bottom" constant="1" id="5Yv-m8-Lv6"/>
-                            <constraint firstItem="e5s-X8-3Up" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="7SY-N4-zxw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GCz-Hq-YYQ" secondAttribute="trailing" constant="20" id="4lk-Oz-Wij"/>
+                            <constraint firstItem="1vm-Vv-GLu" firstAttribute="top" secondItem="GCz-Hq-YYQ" secondAttribute="bottom" constant="8" id="9uQ-O0-1E2"/>
                             <constraint firstItem="Mzs-c2-Age" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CYm-XL-gqA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Mzs-c2-Age" secondAttribute="bottom" constant="41" id="Iri-gW-ndf"/>
-                            <constraint firstItem="e5s-X8-3Up" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1BR-8Y-hgx" secondAttribute="trailing" id="YRE-74-w9A"/>
-                            <constraint firstItem="m2i-cH-W6F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YxL-JX-yt3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e5s-X8-3Up" secondAttribute="trailing" constant="20" id="akS-vq-epf"/>
+                            <constraint firstItem="GCz-Hq-YYQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WUb-Ww-QJc"/>
+                            <constraint firstItem="GCz-Hq-YYQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="c0p-nn-c7q"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1vm-Vv-GLu" secondAttribute="trailing" constant="20" id="eWu-qx-nl7"/>
                             <constraint firstItem="1vm-Vv-GLu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="frM-LX-gyC"/>
-                            <constraint firstItem="1BR-8Y-hgx" firstAttribute="centerY" secondItem="e5s-X8-3Up" secondAttribute="centerY" id="m8T-rL-CA8"/>
-                            <constraint firstItem="1BR-8Y-hgx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="sZR-Bt-gzj"/>
-                            <constraint firstItem="1vm-Vv-GLu" firstAttribute="top" secondItem="m2i-cH-W6F" secondAttribute="bottom" constant="8" id="wyk-QV-jlq"/>
                             <constraint firstItem="Mzs-c2-Age" firstAttribute="top" secondItem="1vm-Vv-GLu" secondAttribute="bottom" constant="68" id="x9l-J9-X0m"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="actionButton" destination="m2i-cH-W6F" id="jQd-6L-icy"/>
+                        <outlet property="gameController" destination="GCz-Hq-YYQ" id="BGI-xC-w1G"/>
                         <outlet property="gameFieldView" destination="1vm-Vv-GLu" id="gbd-n8-ufh"/>
-                        <outlet property="gameObject" destination="iTp-WX-JNB" id="N5F-vN-1zs"/>
                         <outlet property="scoreLabel" destination="Mzs-c2-Age" id="dpe-vm-Qwh"/>
-                        <outlet property="shapeX" destination="6AI-ry-Uk7" id="SS6-Fn-Fev"/>
-                        <outlet property="shapeY" destination="naW-iB-XuH" id="yAd-iT-OYN"/>
-                        <outlet property="stepper" destination="e5s-X8-3Up" id="kzF-fW-vcj"/>
-                        <outlet property="timeLabel" destination="1BR-8Y-hgx" id="ryi-PJ-BDg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -104,7 +68,4 @@
             <point key="canvasLocation" x="136.23188405797103" y="133.25892857142856"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Red_Triangle" width="260" height="225"/>
-    </resources>
 </document>

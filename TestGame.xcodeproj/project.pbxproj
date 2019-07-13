@@ -14,6 +14,7 @@
 		0FC7F36E22D328CD0016D15A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FC7F36D22D328CD0016D15A /* Assets.xcassets */; };
 		0FC7F37122D328CD0016D15A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FC7F36F22D328CD0016D15A /* LaunchScreen.storyboard */; };
 		0FC7F37C22D328CE0016D15A /* TestGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7F37B22D328CE0016D15A /* TestGameTests.swift */; };
+		203AF59F22DA68F600340C98 /* GameControllerViewClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203AF59E22DA68F600340C98 /* GameControllerViewClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		0FC7F37722D328CD0016D15A /* TestGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC7F37B22D328CE0016D15A /* TestGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGameTests.swift; sourceTree = "<group>"; };
 		0FC7F37D22D328CE0016D15A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		203AF59E22DA68F600340C98 /* GameControllerViewClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameControllerViewClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				0FC7F36F22D328CD0016D15A /* LaunchScreen.storyboard */,
 				0FC7F37222D328CD0016D15A /* Info.plist */,
 				0F13585322D8BEB60066E5BE /* GameFieldView.swift */,
+				203AF59E22DA68F600340C98 /* GameControllerViewClass.swift */,
 			);
 			path = TestGame;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				0F13585422D8BEB60066E5BE /* GameFieldView.swift in Sources */,
 				0FC7F36922D328BC0016D15A /* ViewController.swift in Sources */,
 				0FC7F36722D328BC0016D15A /* AppDelegate.swift in Sources */,
+				203AF59F22DA68F600340C98 /* GameControllerViewClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
